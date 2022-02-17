@@ -1,8 +1,0 @@
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-  [build]
-  base = "Practical-2/"
-  publish = "build/"
