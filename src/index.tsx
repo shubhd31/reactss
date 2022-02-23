@@ -2,7 +2,7 @@ import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import Home from './components/Home/Home'
 import ContactUS from './components/ContactUS/ContactUS'
-import AboutUS from './components/AboustUs'
+import AboutUS from './components/AboutUs/AboustUs'
 import './index.css';
 import Todo from './components/To-do/Todo';
 import App from './App';

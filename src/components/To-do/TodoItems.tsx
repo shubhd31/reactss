@@ -1,5 +1,5 @@
 import * as React from 'react';
-import AddTodo from './AddTodo';
+import AddTodo from './AddTodo/AddTodo';
 
 
 function TodoItems(props: object): JSX.Element {
