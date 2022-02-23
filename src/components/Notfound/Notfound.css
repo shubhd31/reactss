@@ -1,0 +1,10 @@
+.Error404{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;    
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
