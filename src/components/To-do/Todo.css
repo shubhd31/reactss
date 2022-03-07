@@ -1,0 +1,17 @@
+body{
+    background-color: #F0EFE9;
+}
+.container_todo{
+ width: 95%;
+}
+
+.Add_btn {
+  font-size: 28px;
+  border: none;
+  outline: none;
+  padding: 5px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgb(9, 245, 135);
+  margin-top: 20px;
+}

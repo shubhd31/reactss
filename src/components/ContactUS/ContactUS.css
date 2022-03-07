@@ -1,0 +1,42 @@
+.data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+input{
+padding: 6px 15px;
+margin-top: 5px;
+}
+label, textarea, button{
+margin-top: 5px;
+}
+.submit{
+
+    padding: 8px 25px;
+    background-color: #F06779;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600; 
+}
+
+.submit:hover{
+background-color: rgba(2, 2, 2, 0.822); 
+color: #F06779;
+ 
+}
+
+h2{
+    text-align: center; 
+    position: relative;
+    top: 130px;
+    text-transform: capitalize;
+    font-weight: 500;
+    
+}
