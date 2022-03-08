@@ -7,6 +7,7 @@ import { RootState } from "../../app/store";
 import UserItem from "./UserItem";
 import UserProfileCard from "./UserProfileCard/UserProfileCard";
 import UserHeader from "./UserHeader";
+import { interfaceUser } from "../../userSlice/types";
 
 const UsersList: FC = () => {
   const dispatch = useDispatch();
@@ -33,12 +34,9 @@ const UsersList: FC = () => {
 
   //memorize the handleHover function
 
-  const handleHover = useCallback(
-    (user) => {
-      setUser(user);
-    },
-    [setUser]
-  );
+  const handleHover = (user: any) => {
+    setUser(user);
+  };
   return (
     <div className="d-flex flex-wrap align-items-center container bg-white mt-5">
       <table
