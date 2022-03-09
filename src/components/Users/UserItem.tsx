@@ -1,16 +1,14 @@
 import * as React from "react";
 import { FC } from "react";
-import { interfaceUser } from "../../userSlice/types";
+import { Post } from "../../Services/types";
 import * as Icon from "react-feather";
 import "./UserItem.css";
 
 const UserItem: FC<{
-  person: interfaceUser;
-  handleHover: (user: interfaceUser | null) => void;
+  person: Post;
+  handleHover: (user: Post | null) => void;
 }> = ({ person, handleHover }) => {
   const [hovered, setHovered] = React.useState(false);
-
-  const [user, setUser] = React.useState(null);
 
   const handleMouseEnter = React.useCallback(() => {
     setHovered(true);
