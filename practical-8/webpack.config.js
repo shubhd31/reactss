@@ -37,6 +37,7 @@ module.exports = {
                     loader: 'url-loader',
                 },
             },
+           
             {
                 test: /\.html$/,
                 use: [
@@ -45,6 +46,7 @@ module.exports = {
                     },
                 ],
             },
+
             {
                 test: /\.s[ac]ss$/i,
                 use: [MiniCssExtractPlugin.loader, "css-loader"]
@@ -52,7 +54,15 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
-            },
+            }, {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                  {
+                    loader: 'file-loader',
+                  },
+                ],
+              },
+              
         ]
     },
     plugins: [new HtmlWebpackPlugin({
