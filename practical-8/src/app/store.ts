@@ -1,11 +1,15 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import practicalsReducer from '../components/Home/PracticalSlice'
+import logoutSlice from '../reducers/logoutSlice';
+import practicalsReducer from '../reducers/PracticalSlice'
+import registerSlice from '../reducers/registerSlice';
 
 
 
 export const store = configureStore({
     reducer: {
-        practicals: practicalsReducer
+        practicals: practicalsReducer,
+        register: registerSlice,
+        login: logoutSlice,
     },
 });
 

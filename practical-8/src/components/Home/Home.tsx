@@ -1,9 +1,7 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import { useResolvedPath } from "react-router-dom";
 import { RootState } from "../../app/store";
-import { Carousel } from "@trendyol-js/react-carousel";
 import "./Home.css";
 
 const Home = () => {
@@ -12,22 +10,30 @@ const Home = () => {
     <div className="m-2">
       <Card style={{ width: "18rem" }}>
         <Card.Img
+          className="pt-2"
           variant="top"
           src={Practical.image}
           style={{ height: "10rem" }}
         />
         <Card.Body>
-          <Card.Title>{Practical.title}</Card.Title>
-          <Card.Text>{Practical.description}</Card.Text>
-          <Button variant="primary">
-            <a href={Practical.demoLink}></a>Demo Link
-          </Button>
+          <Card.Title>
+            <b>{Practical.title}</b>
+          </Card.Title>
+          <Card.Text>
+            <small>{Practical.description}</small>
+          </Card.Text>
+          <a href={Practical.demoLink} className="btn btn-outline-info btn-sm">
+            Demo Link
+          </a>
         </Card.Body>
       </Card>
     </div>
   ));
   return (
-    <div className="d-flex mt-5 container" style={{ overflowX: "scroll" }}>
+    <div
+      className="d-flex mt-5 container shadow-lg"
+      style={{ overflowX: "scroll", width: "930px" }}
+    >
       {listItems}
     </div>
   );
