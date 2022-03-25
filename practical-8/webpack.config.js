@@ -1,6 +1,6 @@
-const path = require('path'),
-    webpack = require('webpack'),
-    HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
@@ -72,6 +72,7 @@ module.exports = {
     new MiniCssExtractPlugin({
         filename: 'static/css/[name].[contenthash:8].css',
         chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
-    })
-    ]
+    }),
+    ],
+
 }

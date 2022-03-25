@@ -7,6 +7,7 @@ import { SignUpSchema } from "../validation/validationSchema";
 import { NavigateFunction, useNavigate } from "react-router";
 import login from "../../reducers/logoutSlice";
 import { updateVal } from "../../reducers/registerSlice";
+import { FormEvent } from "react";
 
 const SignUp = (): JSX.Element => {
   const dispatch = useDispatch();
@@ -55,7 +56,7 @@ const SignUp = (): JSX.Element => {
                           name="image"
                           id="image"
                           accept="jpg,.png"
-                          onChange={(event: React.FormEvent) => {
+                          onChange={(event: FormEvent) => {
                             setFieldValue(
                               "image",
                               event.currentTarget.files[0]

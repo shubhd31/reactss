@@ -6,8 +6,8 @@ import "./Home.css";
 
 const Home = () => {
   const Practicals = useSelector((state: RootState) => state.practicals);
-  const listItems = Practicals.map((Practical) => (
-    <div className="m-2">
+  const listItems = Practicals.map((Practical, index) => (
+    <div className="m-2" key={index}>
       <Card style={{ width: "18rem" }}>
         <Card.Img
           className="pt-2"

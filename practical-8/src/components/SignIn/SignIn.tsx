@@ -33,7 +33,7 @@ function SignIn(): JSX.Element {
                     password: "",
                   }}
                   validationSchema={SignInSchema}
-                  onSubmit={(values) => {
+                  onSubmit={(values: { email: string; password: string }) => {
                     console.log("HEllo");
                     if (
                       values.email === data.email &&
