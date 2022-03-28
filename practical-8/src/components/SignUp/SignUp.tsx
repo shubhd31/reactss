@@ -36,7 +36,7 @@ const SignUp = (): JSX.Element => {
                   number: values.number,
                   password: values.password,
                   confirm_password: values.confirm_password,
-                  image: URL.createObjectURL(values.image),
+                  image: URL.createObjectURL(values.image as unknown as File),
                 })
               );
               navigate("/signin");
@@ -59,7 +59,7 @@ const SignUp = (): JSX.Element => {
                           onChange={(event: FormEvent) => {
                             setFieldValue(
                               "image",
-                              event.currentTarget.files[0]
+                              (event.target as HTMLInputElement).files?.[0]
                             );
                           }}
                           hidden

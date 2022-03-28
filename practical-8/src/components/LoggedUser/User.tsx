@@ -12,7 +12,7 @@ const User = () => {
         <p className="title_lu">{data.email}</p>
         <p>Contact</p>
         <div
-          style={{ margin: "24px 0;" }}
+          style={{ margin: "24px 0" }}
           className="d-flex justify-content-around pb-3"
         >
           <a href="#">
