@@ -11,6 +11,8 @@ import { FormEvent } from "react";
 
 const SignUp = (): JSX.Element => {
   const dispatch = useDispatch();
+
+  //navigate to different page
   const navigate = useNavigate();
 
   return (
@@ -18,6 +20,8 @@ const SignUp = (): JSX.Element => {
       <div className="container col-md-10">
         <label className="h3 font-weight-bold text-left mt-3"> Sign Up </label>
         <div className="row">
+          {/* Formik for getting state from form  */}
+
           <Formik
             initialValues={{
               name: "",
@@ -27,6 +31,8 @@ const SignUp = (): JSX.Element => {
               confirm_password: "",
               image: "",
             }}
+            // Validation of form inputs
+
             validationSchema={SignUpSchema}
             onSubmit={(values) => {
               dispatch(

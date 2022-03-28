@@ -15,8 +15,6 @@ function SignIn(): JSX.Element {
   const dispatch = useDispatch();
 
   const loginHandler = (): void => {
-    // navigate("/home");
-
     dispatch(login(true));
   };
 

@@ -2,6 +2,7 @@ import React from "react";
 import "./User.css";
 
 const User = () => {
+  //get data from local storage
   const data: any = JSON.parse(localStorage.getItem("login") || "{}");
 
   return (

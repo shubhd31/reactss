@@ -16,7 +16,7 @@ const NavbarMain = () => {
     dispatch(logout(false));
   };
   return (
-    <Navbar bg="#e3f2fd" style={{ backgroundColor: "#e3f2fd" }}>
+    <Navbar style={{ backgroundColor: "#e3f2fd" }}>
       <Container style={{ flexWrap: "wrap" }}>
         <Nav className="me-auto">
           <LinkContainer to="/">
@@ -28,7 +28,6 @@ const NavbarMain = () => {
               <LinkContainer to="/user">
                 <Nav.Link>User</Nav.Link>
               </LinkContainer>
-
               <Nav.Link onClick={logoutHandler}>Logout</Nav.Link>
             </>
           ) : (

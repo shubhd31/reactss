@@ -2,13 +2,12 @@ import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { RootState } from "../../app/store";
-import "./Home.css";
 
 const Home = () => {
   const Practicals = useSelector((state: RootState) => state.practicals);
   const listItems = Practicals.map((Practical, index) => (
     <div className="m-2" key={index}>
-      <Card style={{ width: "18rem" }}>
+      <Card className="homecard" style={{ width: "18rem" }}>
         <Card.Img
           className="pt-2"
           variant="top"
