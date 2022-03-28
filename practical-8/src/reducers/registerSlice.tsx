@@ -5,7 +5,7 @@ const entities = {
   number: "",
   password: "",
   confirm_password: "",
-  image: null,
+  image: "",
 };
 
 const registerSlice = createSlice({

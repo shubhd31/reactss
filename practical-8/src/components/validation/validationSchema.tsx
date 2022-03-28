@@ -15,7 +15,7 @@ export const SignUpSchema = Yup.object({
     .required("Confirm password is required"),
   image: Yup.mixed()
     .nullable()
-    .required("Profile Picture is Require")
+    .required("Profile Picture is Required")
     .test("fileSize", "Image Size to much big", (value) => {
       return !value || (value !== null && value.size <= 2000000);
     })

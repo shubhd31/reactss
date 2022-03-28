@@ -19,7 +19,6 @@ ReactDOM.render(
       <App />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/ContactUS" element={<ContactUS />}></Route> */}
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/user" element={<User />} />

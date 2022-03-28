@@ -5,13 +5,13 @@ import { Button, Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { SignUpSchema } from "../validation/validationSchema";
 import { NavigateFunction, useNavigate } from "react-router";
-import login from "../../reducers/logoutSlice";
+import { login } from "../../reducers/loginSlice";
 import { updateVal } from "../../reducers/registerSlice";
 import { FormEvent } from "react";
 
 const SignUp = (): JSX.Element => {
   const dispatch = useDispatch();
-  const navigate: NavigateFunction = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div className="container">
@@ -25,7 +25,7 @@ const SignUp = (): JSX.Element => {
               number: "",
               password: "",
               confirm_password: "",
-              image: null,
+              image: "",
             }}
             validationSchema={SignUpSchema}
             onSubmit={(values) => {
@@ -37,9 +37,9 @@ const SignUp = (): JSX.Element => {
                   password: values.password,
                   confirm_password: values.confirm_password,
                   image: URL.createObjectURL(values.image),
-                }),
-                navigate("/signin")
+                })
               );
+              navigate("/signin");
               dispatch(() => {
                 login(true);
               });

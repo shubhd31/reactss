@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import logoutSlice from '../reducers/logoutSlice';
+import logoutSlice from '../reducers/loginSlice';
 import practicalsReducer from '../reducers/PracticalSlice'
 import registerSlice from '../reducers/registerSlice';
 

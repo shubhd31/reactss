@@ -2,11 +2,11 @@ import React from "react";
 import "./User.css";
 
 const User = () => {
-  const data: any = JSON.parse(localStorage.getItem("login"));
+  const data: any = JSON.parse(localStorage.getItem("login") || "{}");
 
   return (
     <>
-      <div className="card_lu">
+      <div className="card_lu mt-5">
         <img src={data.image} alt="User Profile" style={{ width: "100%" }} />
         <h3 className="pt-3">{data.name}</h3>
         <p className="title_lu">{data.email}</p>

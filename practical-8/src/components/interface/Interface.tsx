@@ -7,5 +7,5 @@ export interface userAction {
   number: string;
   password: string;
   confirm_password: string;
-  image: null;
+  image: string;
 }

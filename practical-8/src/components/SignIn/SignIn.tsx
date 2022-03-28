@@ -6,10 +6,10 @@ import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
 import { NavigateFunction, useNavigate } from "react-router";
 import { userAction } from "../interface/Interface";
 import { SignInSchema } from "../validation/validationSchema";
-import { login } from "../../reducers/logoutSlice";
+import { login } from "../../reducers/loginSlice";
 
 function SignIn(): JSX.Element {
-  const data: userAction = JSON.parse(localStorage.getItem("login"));
+  const data: userAction = JSON.parse(localStorage.getItem("login") || "{}");
   const { action } = useSelector((state: RootStateOrAny) => state.login);
   const navigate: NavigateFunction = useNavigate();
   const dispatch = useDispatch();
@@ -34,7 +34,6 @@ function SignIn(): JSX.Element {
                   }}
                   validationSchema={SignInSchema}
                   onSubmit={(values: { email: string; password: string }) => {
-                    console.log("HEllo");
                     if (
                       values.email === data.email &&
                       values.password === data.password
