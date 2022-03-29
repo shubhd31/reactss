@@ -9,7 +9,6 @@ import { userAction } from "../interface/Interface";
 import { RootState } from "../../app/store";
 
 const NavbarMain = () => {
-  const data: userAction = JSON.parse(localStorage.getItem("login") || "{}");
   const isLogin = useSelector((state: RootState) => state.login);
 
   const dispatch = useDispatch();
