@@ -4,7 +4,7 @@ import { Field, Formik } from "formik";
 import { Button, Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { SignUpSchema } from "../validation/validationSchema";
-import { NavigateFunction, useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { login } from "../../reducers/loginSlice";
 import { updateVal } from "../../reducers/registerSlice";
 import { FormEvent } from "react";

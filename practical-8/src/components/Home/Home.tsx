@@ -29,12 +29,12 @@ const Home = () => {
     </div>
   ));
   return (
-    <div
-      className="d-flex mt-5 container shadow-lg"
-      style={{ overflowX: "scroll", width: "930px" }}
-    >
-      {listItems}
-    </div>
+    <>
+      <h2 className="text-center mt-5 mb-1">React Practice at the firm!</h2>
+      <div className="d-flex flex-wrap justify-content-center container shadow-lg">
+        {listItems}
+      </div>
+    </>
   );
 };
 
