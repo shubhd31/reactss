@@ -1,0 +1,111 @@
+// {
+//     "env": {
+//         "browser": true,
+//         "es2021": true
+//     },
+//     "extends": [
+//         "eslint:recommended",
+//         "plugin:react/recommended",
+//         "plugin:@typescript-eslint/recommended"
+//     ],
+//     "parser": "@typescript-eslint/parser",
+//     "parserOptions": {
+//         "ecmaFeatures": {
+//             "jsx": true
+//         },
+//         "ecmaVersion": "latest",
+//         "sourceType": "module"
+//     },
+//     "plugins": [
+//         "react",
+//         "@typescript-eslint"
+//     ],
+//     "rules": {
+//     }
+// }
+
+{
+
+    "parser": "@typescript-eslint/parser",
+    
+    "env": {
+    
+    "browser": true
+    
+    },
+    
+    "extends": [
+    
+    "plugin:@typescript-eslint/recommended",
+    
+    "plugin:react/recommended",
+    
+    "plugin:prettier/recommended"
+    
+    ],
+    
+    "parserOptions": {
+    
+    "project": ["tsconfig.json"],
+    
+    "ecmaVersion": 2020,
+    
+    "sourceType": "module",
+    
+    "ecmaFeatures": {
+    
+    "jsx": true
+    
+    }
+    
+    },
+    
+    "plugins": [
+    
+    "@typescript-eslint",
+    
+    "react",
+    
+    "react-hooks",
+    
+    "eslint-plugin-import",
+    
+    "prettier"
+    
+    ],
+    
+    "rules": {
+    
+    "react-hooks/rules-of-hooks": "error",
+    
+    "react-hooks/exhaustive-deps": "warn",
+    
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    
+    "react/prop-types": "off",
+    
+    "prettier/prettier": [
+    
+    "error",
+    
+    {
+    
+    "endOfLine": "auto"
+    
+    }
+    
+    ]
+    
+    },
+    
+    "settings": {
+    
+    "react": {
+    
+    "version": "detect"
+    
+    }
+    
+    }
+    
+    }
