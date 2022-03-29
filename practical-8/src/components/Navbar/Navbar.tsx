@@ -3,12 +3,15 @@ import * as React from "react";
 import "./Navbar.css";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../reducers/loginSlice";
 import { userAction } from "../interface/Interface";
+import { RootState } from "../../app/store";
 
 const NavbarMain = () => {
   const data: userAction = JSON.parse(localStorage.getItem("login") || "{}");
+  const isLogin = useSelector((state: RootState) => state.login);
+
   const dispatch = useDispatch();
   const navigate: NavigateFunction = useNavigate();
   const logoutHandler = (): void => {
@@ -23,7 +26,7 @@ const NavbarMain = () => {
             <Nav.Link>Home</Nav.Link>
           </LinkContainer>
 
-          {Object.keys(data).length !== 0 ? (
+          {isLogin ? (
             <>
               <LinkContainer to="/user">
                 <Nav.Link>User</Nav.Link>
